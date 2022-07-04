@@ -159,9 +159,14 @@ main {
 
 #danger-zone {
     height: 100vh;
+    width: 100vw;
     padding: 5rem;
     background: rgb(0,79,77);
     background: linear-gradient(0deg, rgba(0,79,77,1) 0%, rgba(0,0,0,1) 100%);
+    background-image: url("bajo-elagua.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -186,7 +191,7 @@ main {
     height: 28rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 1.8rem;
+    grid-gap: 2.5rem;
     margin: auto;
 }
 
@@ -195,18 +200,19 @@ main {
     display: inline-block;
     padding: 1.4rem;
     justify-content: flex-start;
-    background-color: rgba(0, 0, 0, .25);
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .25);
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .5);
     border-radius: 10px;
     transition-duration: .2s;
+    backdrop-filter: blur(10px);
 }
 
 .ocean__issues-item:hover {
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .9);
+    box-shadow: 0px 5px 25px 0px rgba(225, 225, 225, .9);
 }
 
 .ocean__issues-item img {
     width: 100%;
+    height: 45%;
     margin: auto;
     margin-bottom: 1rem;
     border-radius: 3px;
@@ -219,18 +225,19 @@ main {
 
 
 /*ARROW UP --------------------*/
-
+.go-up {
+    margin: 3rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+}
 
 
 .go-up a {
     color: #fff;
     text-decoration: none;
     font-size: 3rem;
-    margin: 3rem;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    display: inline-block;
 }
 
 .go-up a:hover {
@@ -244,7 +251,6 @@ main {
 
 footer {
     height: 15vh;
-    background-color: rgba(0,79,77,.5);
     display: flex;
     padding: 5rem;
     justify-content: space-between;
@@ -258,3 +264,227 @@ footer {
 }
 
 
+/*MEDIA QUERIES -------------------------------*/
+
+
+@media (max-width: 600px) {
+
+    /*NAV---------------------*/
+
+    nav {
+        padding: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+
+    nav ul a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.8rem;
+        display: inline-block;
+        transition-property: transform;
+        transition-duration: .2s;
+    }
+
+    nav ul a:hover {
+        transform: translateY(-5px);
+        font-weight: 900;
+    }
+
+
+    /*MAIN .....................  */
+
+    #background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    main {
+        padding-top: 14rem;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+
+    .second-title {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 16rem;
+        grid-gap: 2rem;
+        font-size: .8rem;
+    }
+
+    .second-title p {
+        margin: auto;
+    }
+
+    .flecha {
+        margin: auto;
+        font-size: 1rem;
+    }
+
+    .flecha a {
+        color: #fff;
+        display: inline-block;
+
+    }
+
+
+    /*INFORMATION---------------------*/
+
+    #info {
+        background-color: black;
+        height: 100vh;
+        width: 100vw;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin: auto;
+    }
+
+    .side-information {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .side-information h3 {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .side-information p {
+        margin: 1rem auto;
+        font-size: 0.8rem;
+    }
+
+    .earth {
+        display: flex;
+    }
+
+    .earth img {
+        width: 250px;
+        margin: auto;
+    }
+
+
+
+    /* DANGER ZONE -------------------*/
+
+
+    #danger-zone {
+        height: 100vh;
+        width: 100vw;
+        padding: 1rem;
+        background-image: url("corales.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .section-title h3 {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .section-title p {
+        margin: 0 auto;
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+
+    .ocean__issues {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2.5rem;
+        margin: auto;
+    }
+
+    .ocean__issues-item {
+        width: auto;
+        display: inline-block;
+        padding: 1.4rem;
+        justify-content: flex-start;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        transition-duration: .2s;
+        backdrop-filter: none;
+    }
+
+    .ocean__issues-item:hover {
+        box-shadow: 0px 5px 25px 0px rgba(225, 225, 225, .9);
+    }
+
+    .ocean__issues-item img {
+        width: 100%;
+        height: 45%;
+        margin: auto;
+        margin-bottom: 1rem;
+        border-radius: 3px;
+    }
+
+    .ocean__issues-item h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /*ARROW UP --------------------*/
+
+
+    .go-up {
+        border: solid 3px red;
+        position: fixed;
+        display: inline-block;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+    }
+
+    .go-up a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 2.5rem;
+        margin: 2rem;
+        display: inline-block;
+    }
+
+    .go-up a:hover {
+        animation-name: wobble-vertical;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+
+
+
+
+
+
+
+}
